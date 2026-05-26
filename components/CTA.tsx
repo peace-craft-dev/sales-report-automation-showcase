@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -24,21 +24,23 @@ export default function CTA() {
           <p className="text-white/85 mb-7 max-w-xl text-sm md:text-base">
             御社のスプレッドシート構造に合わせて、グラフ・通知先・スケジュール・出力形式をカスタムします。まずは 30 分の無料ヒアリングから。
           </p>
-          <div className="flex flex-col sm:flex-row gap-2.5">
+          <div className="flex flex-col sm:flex-row gap-2.5 mb-6">
             <a
               href="https://corporate-lp-nextjs.vercel.app/#contact"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-bg-dim text-brand-700 px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"
             >
-              無料相談を申し込む
+              ご相談はこちら（3 サイト経由）
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a
-              href="mailto:peace.craft.dev@gmail.com?subject=PeaceCraft%20%E5%A3%B2%E4%B8%8A%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              メールで相談
-            </a>
+          </div>
+          <div className="flex items-start gap-2 text-xs text-white/70 leading-relaxed border-t border-white/15 pt-4">
+            <Shield className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+            <span>
+              ご相談はランサーズ・ココナラ・CrowdWorks のいずれかでお受けします。
+              本人確認済・2 段階認証有効で安全に運用しています。
+            </span>
           </div>
         </div>
       </motion.div>
