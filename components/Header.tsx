@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Activity } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,40 +17,43 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled ? "glass-warm border-b border-border" : "bg-transparent"
+        "fixed top-0 inset-x-0 z-50 transition-all duration-200",
+        scrolled
+          ? "bg-white/90 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
       )}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
         <a
           href="https://corporate-lp-nextjs.vercel.app/"
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
         >
-          <ArrowLeft className="w-4 h-4 text-ink-muted group-hover:text-sage-700 transition-colors" />
-          <div className="w-7 h-7 rounded-lg bg-sage-gradient" />
-          <span className="text-ink font-semibold tracking-tight">
-            PeaceCraft
-          </span>
+          <ArrowLeft className="w-4 h-4 text-ink-muted group-hover:text-brand-600 transition-colors" />
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-md bg-indigo-gradient flex items-center justify-center">
+              <Activity className="w-3.5 h-3.5 text-white" />
+            </div>
+            <span className="font-semibold text-sm text-ink tracking-tight">
+              PeaceCraft
+            </span>
+            <span className="text-xs text-ink-muted">/ Sales Report Automation</span>
+          </div>
         </a>
 
-        <div className="hidden md:flex items-center gap-3">
-          <span className="text-xs tracking-[0.2em] text-wood-600 uppercase font-medium">
-            Showcase #1
-          </span>
+        <div className="flex items-center gap-3">
+          <a
+            href="#live-demo"
+            className="text-sm text-ink-soft hover:text-brand-600 transition-colors hidden sm:inline"
+          >
+            ライブデモ
+          </a>
           <a
             href="https://corporate-lp-nextjs.vercel.app/#contact"
-            className="bg-sage-600 hover:bg-sage-700 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-glow transition-colors"
+            className="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-3.5 py-1.5 rounded-md transition-colors"
           >
-            同じものを作る
+            ¥50,000〜 で依頼
           </a>
         </div>
-
-        <a
-          href="https://corporate-lp-nextjs.vercel.app/#contact"
-          className="md:hidden text-sm font-medium px-3 py-1.5 rounded-md bg-sage-600 text-white"
-        >
-          相談
-        </a>
       </div>
     </header>
   );

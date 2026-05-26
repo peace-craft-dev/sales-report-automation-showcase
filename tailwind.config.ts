@@ -9,67 +9,54 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          DEFAULT: "#faf7f2",
-          soft: "#f4f0e8",
+          DEFAULT: "#f8fafc",
           card: "#ffffff",
-          warm: "#f7f2e8",
+          dim: "#f1f5f9",
         },
         border: {
-          DEFAULT: "#e5e0d6",
-          strong: "#d6cfc0",
+          DEFAULT: "#e2e8f0",
+          strong: "#cbd5e1",
         },
         ink: {
-          DEFAULT: "#2c3530",
-          soft: "#6b7370",
-          muted: "#9aa19e",
+          DEFAULT: "#0f172a",
+          soft: "#475569",
+          muted: "#94a3b8",
         },
-        sage: {
-          50: "#f0f4f1",
-          100: "#dde7e0",
-          200: "#b8cdc1",
-          300: "#92b29f",
-          400: "#6e9682",
-          500: "#5a7d6b",
-          600: "#46624f",
-          700: "#374f3f",
-          800: "#2a3c30",
-          900: "#1d2a22",
+        brand: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
         },
-        wood: {
-          50: "#faf5ec",
-          100: "#f2e7d2",
-          200: "#e6d2ad",
-          300: "#d8bb87",
-          400: "#cba66d",
-          500: "#b8946a",
-          600: "#9c7c56",
-          700: "#7e6244",
-          800: "#5f4a33",
-          900: "#3f3122",
-        },
+        success: "#10b981",
+        warning: "#f59e0b",
+        danger: "#ef4444",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-serif)", "Georgia", "serif"],
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "Menlo", "monospace"],
       },
       backgroundImage: {
-        "grid-warm":
-          "linear-gradient(to right, rgba(90,125,107,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(90,125,107,0.06) 1px, transparent 1px)",
-        "radial-warm":
-          "radial-gradient(ellipse at top, rgba(90,125,107,0.10), transparent 60%)",
-        "sage-gradient":
-          "linear-gradient(135deg, #5a7d6b 0%, #b8946a 100%)",
-        "hero-bg":
-          "linear-gradient(180deg, #faf7f2 0%, #f4f0e8 100%)",
+        "indigo-gradient":
+          "linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%)",
+        "grid-cool":
+          "linear-gradient(to right, rgba(37,99,235,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(37,99,235,0.06) 1px, transparent 1px)",
       },
       backgroundSize: {
-        "grid-40": "40px 40px",
+        "grid-32": "32px 32px",
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(44,53,48,0.04), 0 8px 24px rgba(44,53,48,0.04)",
-        card: "0 2px 4px rgba(44,53,48,0.05), 0 12px 40px rgba(44,53,48,0.06)",
-        glow: "0 0 40px -8px rgba(90,125,107,0.30)",
+        soft: "0 1px 2px rgba(15,23,42,0.04), 0 4px 12px rgba(15,23,42,0.04)",
+        card: "0 1px 3px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.06)",
+        elevated: "0 4px 12px rgba(15,23,42,0.08), 0 24px 60px rgba(15,23,42,0.10)",
+        focus: "0 0 0 3px rgba(59,130,246,0.30)",
       },
     },
   },
